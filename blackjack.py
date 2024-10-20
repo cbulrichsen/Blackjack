@@ -180,6 +180,9 @@ class BlackjackApplication:
         while True:
             try:
                 starting_money = int(input("And how much money will everyone be starting with? "))
+                if starting_money < 1:
+                    print("Please type a positive integer")
+                    continue
                 break
             except:
                 print("Please type in an integer number")
